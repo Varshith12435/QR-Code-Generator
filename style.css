@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #5b86e5, #36d1dc);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    display: inline-block;
+    max-width: 95%;
+}
+
+.input-box {
+    width: 300px;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 600px;
+    max-height: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #5b86e5;
+    border-radius: 8px;
+    resize: both;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.btn {
+    margin: 10px;
+    padding: 12px 20px;
+    background: #5b86e5;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #4a75d0;
+}
+
+.download-btn {
+    background: #28a745;
+}
+
+.download-btn:hover {
+    background: #218838;
+}
+
+.new-btn {
+    background: #ff9800;
+}
+
+.new-btn:hover {
+    background: #e68900;
+}
+
+/* QR Image Resize Automatically */
+.qr-image {
+    margin-top: 20px;
+    width: 60vw;     /* scales with screen width */
+    max-width: 350px; /* bigger for desktops */
+    min-width: 180px; /* smaller for mobiles */
+    height: auto;
+}
+
+/* Button Wrapper */
+.btn-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* For laptops/desktops – place buttons side-by-side */
+@media (min-width: 768px) {
+    .btn-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
