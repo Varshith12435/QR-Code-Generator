@@ -6,7 +6,7 @@ Users can enter any text or URL and instantly generate a downloadable QR code.
 All QR code images are automatically saved inside a dedicated folder.
 
 # 📁 Project Folder Structure
-
+```
 qr_website/
 │
 ├── app.py
@@ -20,7 +20,7 @@ qr_website/
 │        └── (Generated QR code images will be saved here)
 │
 └── README.md
-
+```
 # 🚀 Features
 
 🔹 Generate QR code from any text or URL
@@ -41,39 +41,41 @@ qr_website/
 
 # 🛠️ Technologies Used
 
-Python 3
+🔹 Python 3
 
-Flask
+🔹 Flask
 
-qrcode
+🔹 qrcode
 
-Pillow (required by qrcode)
+🔹 Pillow (required by qrcode)
 
-HTML5
+🔹 HTML5
 
-CSS3
+🔹 CSS3
+
 
 # 📦 Required Python Packages
 
 Install all required packages using:
-
+```
 pip install flask qrcode pillow
+```
 
 # ▶️ How to Run the Project
 
 Open terminal inside the project folder:
-
+```
 cd qr_website
-
+```
 
 Run the Flask application:
-
+```
 python app.py
-
+```
 
 Open your browser and go to:
-
+```
 http://127.0.0.1:5000/
-
+```
 
 You're ready to generate QR codes! 🎉
