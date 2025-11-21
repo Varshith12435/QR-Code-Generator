@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>QR Code Generator</h2>
+
+        {% if not qr_filename %}
+        <!-- Show Input Form -->
+        <form action="/generate_qr" method="POST">
+            <label>Enter Text or Link:</label><br>
+            <textarea name="qr_text" class="input-box" placeholder="Type here..." required></textarea><br>
+
+            <button type="submit" class="btn">Generate QR Code</button>
+        </form>
+        {% endif %}
+
+        {% if qr_filename %}
+    <h3>Your QR Code:</h3>
+
+    <img src="/static/qrcodes/{{ qr_filename }}" class="qr-image">
+
+    <div class="btn-group">
+        <a href="/static/qrcodes/{{ qr_filename }}" download class="btn download-btn">
+            Download QR Code
+        </a>
+
+        <a href="/" class="btn new-btn">
+            Generate Another QR
+        </a>
+    </div>
+{% endif %}
+
+    </div>
+
+</body>
+</html>
